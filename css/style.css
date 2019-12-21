@@ -124,7 +124,7 @@ body{
 
 .lineThrough{
     text-decoration: line-through;
-    color: #ccc;
+    color: #ccc !important;
 }
 
 /* ------ add item ------*/
