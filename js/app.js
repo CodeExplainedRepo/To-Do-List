@@ -9,7 +9,7 @@ const UNCHECK = "fa-circle-thin";
 const LINE_THROUGH = "lineThrough";
 const CHANGE = "editable";
 
-var timer = null, delay = 260, click = 0, canFocus = true;//double click
+var timer = null, delay = 260, click = 0;//double click
 
 clear.addEventListener("click", function () {
     localStorage.clear();
@@ -47,7 +47,7 @@ function add_to_do(toDo, id, done, trash) {
 
     const item = `<li class="item">
                     <i class="fa ${DONE} co" job="complete" id="${id}"></i>
-                    <input class="text ${LINE}" job="edit" value="${toDo}" id="${id}" Blur=""">
+                    <input disabled="disabled" class="text ${LINE}" job="edit" value="${toDo}" id="${id}" ">
                     <i class="fa fa-trash-o de" job="delete" id="${id}"></i>
                 </li>
                 `;
@@ -114,9 +114,7 @@ function removeToDo(element) {
 }
 
 function editTodo(element){
-    var newTodo, content = element.parentNode.querySelector(".text");
-    if(canFocus)
-        content.blur();
+    var newTodo, content = element.parentNode.querySelector(".text"),preText;
     click++;
     if(click === 1){
         timer = setTimeout(function(){
@@ -124,14 +122,17 @@ function editTodo(element){
         }, (delay));
     } else{
         click = 0;
-        canFocus = false;
         clearTimeout(timer);
+        preText = content.value;
+        content.disabled = false;
         content.focus();
         content.onblur = ()=>{
             newTodo = content.value;
-            LIST[element.id].name = newTodo;
-            localStorage.setItem("TODO",JSON.stringify(LIST));
-            canFocus = true;
+            if(preText !== newTodo){
+                LIST[element.id].name = newTodo;
+                localStorage.setItem("TODO",JSON.stringify(LIST));
+                content.disabled = true;
+            }            
         };
     }
     
