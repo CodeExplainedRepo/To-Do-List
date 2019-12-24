@@ -36,3 +36,5 @@ https://youtu.be/L07i4g-zhDA
 
 ### 2019.12.21
 added a function when double click the item you can edit the content of to-do-list and the changes will auto save then the content lose the focus.
+
+You can see the result in https://kkkinlibrary.github.io/To-Do-List/
