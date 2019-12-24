@@ -48,6 +48,46 @@ body{
     font-size: 25px;
     font-family: 'Titillium Web' sans-serif;
 }
+
+.display{
+    position: absolute;
+    height: 45px;
+    width: 380px;
+    top: 160px;
+}
+
+.display i.All{
+    position: absolute;
+    right: 60px;
+    font-size: 25px;
+    color: #fff;
+    bottom: 13px;
+}
+.display i.All:hover{
+    cursor: pointer;
+}
+
+.display i.fulfill{
+    position: absolute;
+    right: 35px;
+    font-size: 25px;
+    color: #fff;
+    bottom: 13px;
+}
+.display i.fulfill:hover{
+    cursor: pointer;
+}
+
+.display i.unfinished{
+    position: absolute;
+    right: 10px;
+    font-size: 25px;
+    color: #fff;
+    bottom: 13px;
+}
+.display i.unfinished:hover{
+    cursor: pointer;
+}
 /*  -----content-----  */
 .content{
     width: 380px;
@@ -125,6 +165,10 @@ body{
 .lineThrough{
     text-decoration: line-through;
     color: #ccc !important;
+}
+
+::-webkit-scrollbar{
+    display: none;
 }
 
 /* ------ add item ------*/
