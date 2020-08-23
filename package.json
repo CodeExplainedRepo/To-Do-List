@@ -1,0 +1,25 @@
+{
+  "name": "ToDo",
+  "version": "1.0.0",
+  "description": "Create To Do List In JavaScript",
+  "main": "service-worker.js",
+  "scripts": {
+    "dev": "webpack --watch --mode=development",
+    "prod": "webpack --mode=production",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.2.1",
+    "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.10.0",
+    "path": "^0.12.7",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
