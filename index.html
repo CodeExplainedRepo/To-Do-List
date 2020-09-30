@@ -1,1 +1,42 @@
 <!-- CODE EXPLAINED CHANNEL -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web" >
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="header">
+            <div class="clear">
+                <i class="fa fa-refresh" aria-hidden="true"></i>
+            </div>
+            <div id="date"></div>
+        </div>
+
+        <div class="content">
+            <ul id="list">
+                <li class="item">
+                    <i class="fa fa-circle-thin co" job="complete" id="0"></i>
+                    <p class="text">Drink</p>
+                   <!--<i class="fa fa-trash-o de" job="delete" id="0"></i>--> 
+                    <img  class="de" job="delete" src="https://img.icons8.com/ios-glyphs/30/000000/trash--v1.png" id="0"/>
+                  
+                </li>
+            </ul>
+            <div class="add-to-do">
+             <!-- <i class="fa fa-plus-circle" aria-hidden="true"></i>-->
+                 <img src="https://img.icons8.com/cute-clipart/64/000000/plus.png"/>
+                <input type="text" id="input" placeholder="add a to-do">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="todo.js"></script>
+</html>
