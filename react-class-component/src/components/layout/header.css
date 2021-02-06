@@ -1,0 +1,39 @@
+header {
+    width: 100%;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--header-background-color);
+}
+
+.header__logo {
+    height: 100%;
+    padding: 10px 20px;
+    display: flex;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.header__menu {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 50%;
+}
+
+.header__menu-item {
+    padding: 0 10px;
+}
+
+.header__action-bar {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+}

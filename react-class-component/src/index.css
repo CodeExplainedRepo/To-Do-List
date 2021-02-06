@@ -1,13 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+@import "./styles/variables.css";
+@import "./styles/reset.css";
+
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--app-font-family);
+  height: 100vh;
+  width:100vw;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#id {
+  height: 100%;
+  background-color: aliceblue;
+}
+
+main {
+  position: relative;
+  padding-top: var(--header-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
