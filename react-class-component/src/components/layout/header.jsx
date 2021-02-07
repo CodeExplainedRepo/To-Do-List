@@ -26,9 +26,9 @@ class ActionBar extends Component {
     render(){
         return(
             <div className="header__action-bar">
-                <div className="search-bar">Search Bar</div>
-                <div className="login">Log In</div>
-                <div className="signup">Sign Up</div>
+                <div className="header__action-item search-bar">Search Bar</div>
+                <div className="header__action-item login">Log In</div>
+                <div className="header__action-item signup">Sign Up</div>
             </div>
         )
     }

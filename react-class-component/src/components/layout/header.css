@@ -3,20 +3,22 @@ header {
     height: var(--header-height);
     display: flex;
     align-items: center;
-    position:fixed;
+    /* position:fixed;
     top: 0;
     left: 0;
-    right: 0;
+    right: 0; */
     background-color: var(--header-background-color);
 }
 
 .header__logo {
     height: 100%;
-    padding: 10px 20px;
-    display: flex;
-    text-align: center;
+    margin-left: 20px;
     font-size: 2rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
 }
+
 
 .header__menu {
     display: flex;
@@ -24,11 +26,20 @@ header {
     align-items: center;
     justify-content: center;
     position: relative;
-    left: 50%;
+    left: 20%;
 }
 
 .header__menu-item {
     padding: 0 10px;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header__menu-item:hover {
+    background-color: rgb(4, 83, 153);
+    border-bottom: 5px solid red;
 }
 
 .header__action-bar {
@@ -36,4 +47,9 @@ header {
     align-items: center;
     position: absolute;
     right: 20px;
+}
+
+.header__action-item {
+    margin: 0 10px;
+    cursor: pointer;
 }
