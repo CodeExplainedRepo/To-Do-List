@@ -1,25 +1,13 @@
 import React, { Component } from 'react';
-import { fetchAllTodos } from "../../apis/todoServices";
-
-export default class TodoCounts extends Component {
-    constructor(props){
-        super(props);
-        this.state={
-            count: 0,
-        };
-    }
-
-    componentDidMount(){
-        fetchAllTodos().then((data) => {
-            this.setState({count: data.length})
-        })
-    }
-
+import {withTodos} from "../../HOC/withTodos";
+class TodoCounts extends Component {
     render() {
         return (
             <div>
-                <h1>{this.state.count}</h1>
+                <h1>{this.props.count}</h1>
             </div>
         )
     }
-}
+};
+
+export default withTodos(TodoCounts);

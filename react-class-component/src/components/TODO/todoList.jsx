@@ -1,25 +1,18 @@
 import React, { Component } from 'react';
+import { withTodos } from '../../HOC/withTodos';
 import TODO from "./TODO";
-import { fetchAllTodos, addTodo, removeTodo } from "../../apis/todoServices";
-import { limit10Items } from "../../utils";
 import "./todolist.css";
 
 
-export default class TodoList extends Component {
+class TodoList extends Component {
     constructor(props){
         super(props);
         this.state={
             userInput: "",
-            todos: [],
         };
         this.handleChange = this.handleChange.bind(this);
-        this.cleanUserInput = this.cleanUserInput.bind(this);
+        this.cleanUserInput = this.cleanUserInput.bind(this); 
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleRemoveTodo = this.handleRemoveTodo.bind(this);
-    }
-
-    componentDidMount(){
-        fetchAllTodos().then((data) => this.setState({todos: limit10Items(data)}));
     }
 
     handleChange(e) {
@@ -34,11 +27,7 @@ export default class TodoList extends Component {
         e.preventDefault();
         this.setState({userInput:""});
         const newTodo = {userId: 1, title: this.state.userInput};
-        addTodo(newTodo).then((data) => this.setState((prevState) => ({todos: [data,...prevState.todos]})));
-    }
-
-    handleRemoveTodo(id){
-        removeTodo(id).then((data) => this.setState((prevState) => ({todos: prevState.todos.filter((todo) => todo.id !== id)})));
+        this.props.addTodo(newTodo);
     }
 
     render() {
@@ -51,11 +40,13 @@ export default class TodoList extends Component {
                     </div>
                 </form>
                 <ul className="todo__content">
-                    {this.state.todos?.map((item) => (
-                        <TODO key={item.id} item={item} handleRemoveTodo={this.handleRemoveTodo}/>
+                    {this.props.todos?.map((item) => (
+                        <TODO key={item.id} item={item} handleRemoveTodo={() => this.props.removeTodo}/>
                     ))}
                 </ul>
             </section>
         )
     };
 };
+
+export default withTodos(TodoList);
