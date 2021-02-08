@@ -1,8 +1,6 @@
 import React from 'react';
 import { fetchAllTodos, addTodo, removeTodo } from '../apis/todoServices';
-
-export const withTodos = (WrappedComponnet) =>
-  class extends React.Component {
+export default class WithTodosData extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
@@ -38,14 +36,6 @@ export const withTodos = (WrappedComponnet) =>
     }
 
     render() {
-      return (
-        <WrappedComponnet
-          {...props}
-          count={this.state.todos.length}
-          todos={this.state.todos}
-          addTodo={this.hanldeAddTodo}
-          removeTodo={this.handleRemoveTodo}
-        ></WrappedComponnet>
-      );
+      return this.props.render(this.state.todos, this.hanldeAddTodo, this.handleRemoveTodo);
     }
   };
