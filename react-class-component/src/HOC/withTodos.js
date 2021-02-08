@@ -40,6 +40,7 @@ export const withTodos = (WrappedComponnet) =>
     render() {
       return (
         <WrappedComponnet
+          {...props}
           count={this.state.todos.length}
           todos={this.state.todos}
           addTodo={this.hanldeAddTodo}
