@@ -41,7 +41,7 @@ class TodoList extends Component {
                 </form>
                 <ul className="todo__content">
                     {this.props.todos?.map((item) => (
-                        <TODO key={item.id} item={item} handleRemoveTodo={() => this.props.removeTodo}/>
+                        <TODO key={item.id} item={item} handleRemoveTodo={this.props.removeTodo}/>
                     ))}
                 </ul>
             </section>

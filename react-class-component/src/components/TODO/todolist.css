@@ -77,7 +77,7 @@
 .todo__item {
     height: 30px;
     position:relative;
-    height: auto;
+    padding-left: 10px;
     display: flex;
 }
 .todo__item:hover {
@@ -87,6 +87,9 @@
     flex-grow: 1;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    width: 545.896px;
+    overflow: hidden;
 }
 .todo__delete-icon {
     padding: 0 5px;

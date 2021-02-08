@@ -1,1 +1,1 @@
-export const limit50Chars = (userInput) => userInput.length >=60 ? userInput.substring(0,50)+"..." : userInput;
+export const limit50Chars = (userInput) => userInput.length >=100 ? userInput.substring(0,100)+"..." : userInput;
