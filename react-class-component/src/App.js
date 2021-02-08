@@ -9,7 +9,12 @@ function App() {
     <Layout>
       {/* <TodoCounts />
       <TodoList /> */}
-      <WithTodosData render={(todos, addTodo, removeTodo)=><TodoList todos={todos} addTodo={addTodo} removeTodo={removeTodo} />} />
+      <WithTodosData render={(todos)=><TodoCounts count={todos.length} />} />
+      {/* <WithTodosData render={(todos, addTodo, removeTodo)=><TodoList todos={todos} addTodo={addTodo} removeTodo={removeTodo} />} /> */}
+      <WithTodosData>
+        {(todos, addTodo, removeTodo)=><TodoList todos={todos} addTodo={addTodo} removeTodo={removeTodo} /> }
+      </WithTodosData>
+
     </Layout>
   );
 }
