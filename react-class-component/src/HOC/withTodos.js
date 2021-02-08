@@ -1,5 +1,5 @@
-import React from 'react';
-import { fetchAllTodos, addTodo, removeTodo } from '../apis/todoServices';
+import React from "react";
+import { fetchAllTodos, addTodo, removeTodo } from "../apis/todoServices";
 
 export const withTodos = (WrappedComponnet) =>
   class extends React.Component {
@@ -29,7 +29,7 @@ export const withTodos = (WrappedComponnet) =>
     }
 
     componentDidMount() {
-        fetchAllTodos().then((data) => {
+      fetchAllTodos().then((data) => {
         console.log(data);
         this.setState({
           todos: data,
@@ -40,7 +40,7 @@ export const withTodos = (WrappedComponnet) =>
     render() {
       return (
         <WrappedComponnet
-          {...props}
+          {...this.props}
           count={this.state.todos.length}
           todos={this.state.todos}
           addTodo={this.hanldeAddTodo}
