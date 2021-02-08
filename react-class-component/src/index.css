@@ -18,6 +18,7 @@ main {
   position: relative;
   padding-top: var(--header-height);
   display: flex;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   text-align: center;
