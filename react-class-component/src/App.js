@@ -4,6 +4,7 @@ import TodoCounts from "./components/TODO/TodoCounts";
 import TodoList from "./components/TODO/todoList";
 import WithTodosData from "./renderProps/withTodosData";
 import ColorfulTodo from "./components/TODO/colorfulTODO";
+import TODO from "./components/TODO/TODO";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <WithTodosData>
         {(todos, addTodo, removeTodo) => (
           <TodoList todos={todos} addTodo={addTodo} removeTodo={removeTodo}>
-            {(todos, removeTodo) => todos?.map((item) => <ColorfulTodo item={item} removeTodo={removeTodo} />)}
+            {(todos, removeTodo) => todos?.map((item) => <TODO item={item} removeTodo={removeTodo} />)}
           </TodoList>
         )}
       </WithTodosData>

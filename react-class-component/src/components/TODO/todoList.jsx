@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import TODO from "./TODO";
 import "./todolist.css";
-import ColorfulTODO from "./colorfulTODO";
 
 class TodoList extends Component {
   constructor(props) {
