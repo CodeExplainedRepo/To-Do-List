@@ -40,11 +40,7 @@ class TodoList extends Component {
             </span>
           </div>
         </form>
-        <ul className="todo__content">
-          {this.props.todos?.map((item) => (
-            <ColorfulTODO key={item.id} item={item} handleRemoveTodo={this.props.removeTodo} />
-          ))}
-        </ul>
+        <ul className="todo__content">{this.props.children(this.props.todos, this.props.removeTodo)}</ul>
       </section>
     );
   }
