@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+@import "./styles/variables.css";
+@import "./styles/reset.css";
+
+
+body {
+  font-family: var(--app-font-family);
+  height: 100vh;
+  width:100vw;
+}
+
+#id {
+  height: 100%;
+  background-color: aliceblue;
+}
+
+main {
+  position: relative;
+  padding-top: var(--header-height);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

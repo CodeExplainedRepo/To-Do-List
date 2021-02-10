@@ -1,0 +1,11 @@
+:root {
+    --reset-margin: 0;
+    --reset-mpadding: 0;
+    --reset-box-sizing: border-box;
+
+    --app-font-family: 'Sriracha', cursive;
+
+    --header-background-color: green;
+    --header-height: 10vh;
+
+}
